@@ -1,0 +1,12 @@
+<hibernate-mappings package="com.justHibernate.CollectionsTest">
+	<class name="Showroom">
+		<id column="SHOWROOM_ID" name="id">
+			<generator class="native"></generator>
+		</id>
+		<property column="MANAGER" name="manager"/>
+		<list name="cars" cascade="all" table="CARS_LIST">
+		<key column ="SHOWROOM_ID"/>
+		
+		</list>
+	</class>
+</hibernate-mappings>

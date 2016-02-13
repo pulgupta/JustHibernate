@@ -2,6 +2,7 @@ package com.justHibernate;
 
 import java.io.Serializable;
 
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,7 +18,8 @@ public class Trade implements Serializable {
 	@Transient
 	private static final long serialVersionUID = 1L;
 	
-	@Id
+	@EmbeddedId
+	private CompositeKey key = null;
 	private long tradeId = -1;
 	private double quantity = 0;
 	private String security = null;
@@ -40,4 +42,11 @@ public class Trade implements Serializable {
 	public void setSecurity(String security) {
 		this.security = security;
 	}
+	public CompositeKey getKey() {
+		return key;
+	}
+	public void setKey(CompositeKey key) {
+		this.key = key;
+	}
+	
 }
