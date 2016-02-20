@@ -14,9 +14,11 @@ public class SaveMovie {
 	 */
 	public static void main(String[] args) {
 		
+		PhoneNumber pn = new PhoneNumber("+91", 9897,632694);
 		LeadActor la = new LeadActor();
 		la.setName("Akshay Kumar");
 		la.setAge(40);
+		la.setPn(pn);
 		
 		Producers p1 = new Producers();
 		p1.setAmount(100L);

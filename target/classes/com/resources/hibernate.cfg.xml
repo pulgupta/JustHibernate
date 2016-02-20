@@ -21,14 +21,19 @@
 		<property name="hibernate.current_session_context_class">thread</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hbm2ddl.auto">create</property>
-
-
+		<property name="hibernate.cache.region.factory_class">
+			org.hibernate.cache.ehcache.EhCacheRegionFactory
+		</property>
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.use_query_cache">true</property>
 		<!-- List of annotated java class -->
 		<mapping class="com.justHibernate.Trade" />
 		<mapping class="com.justHibernate.mappings.Movie" />
 		<mapping class="com.justHibernate.mappings.LeadActor" />
 		<mapping class="com.justHibernate.mappings.Producers" />
 		<mapping class="com.justHibernate.mappings.Financers" />
+		<mapping class="com.justHibernate.inheritance.Employee" />
+		<mapping class="com.justHibernate.inheritance.Person" />
 		
 		<!-- List of mapping resources -->
 		<mapping resource="com/resources/hibernate.hbm.xml"></mapping>
