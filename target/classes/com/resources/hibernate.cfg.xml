@@ -25,5 +25,12 @@
 
 		<!-- List of annotated java class -->
 		<mapping class="com.justHibernate.Trade" />
+		<mapping class="com.justHibernate.mappings.Movie" />
+		<mapping class="com.justHibernate.mappings.LeadActor" />
+		<mapping class="com.justHibernate.mappings.Producers" />
+		<mapping class="com.justHibernate.mappings.Financers" />
+		
+		<!-- List of mapping resources -->
+		<mapping resource="com/resources/hibernate.hbm.xml"></mapping>
 	</session-factory>
 </hibernate-configuration>

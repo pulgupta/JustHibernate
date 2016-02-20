@@ -5,9 +5,8 @@ public class Car {
 	private int id;
 	private String modelName;
 	private String year;
-	private String variant;
-	private long price;
 	
+	public Car() {}
 	
 	public int getId() {
 		return id;
@@ -27,19 +26,4 @@ public class Car {
 	public void setYear(String year) {
 		this.year = year;
 	}
-	public String getVariant() {
-		return variant;
-	}
-	public void setVariant(String variant) {
-		this.variant = variant;
-	}
-	public long getPrice() {
-		return price;
-	}
-	public void setPrice(long price) {
-		this.price = price;
-	}
-	
-	
-	
 }

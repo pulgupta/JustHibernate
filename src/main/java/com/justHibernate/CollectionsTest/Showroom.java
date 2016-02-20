@@ -7,9 +7,9 @@ public class Showroom {
 	private int id;
 	private String manager;
 	private String address;
-	
 	private List<Car> listAvai;
 
+	public Showroom(){}
 	
 	public int getId() {
 		return id;
@@ -42,6 +42,5 @@ public class Showroom {
 	public void setListAvai(List<Car> listAvai) {
 		this.listAvai = listAvai;
 	}
-	
 	
 }
