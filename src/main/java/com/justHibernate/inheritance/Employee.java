@@ -2,8 +2,6 @@ package com.justHibernate.inheritance;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Entity
 @DiscriminatorValue(value="Employee")

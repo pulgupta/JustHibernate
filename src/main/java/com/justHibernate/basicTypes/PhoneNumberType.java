@@ -24,6 +24,11 @@ import org.hibernate.type.Type;
  */
 public class PhoneNumberType implements BasicType{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public boolean isAssociationType() {
 		// TODO Auto-generated method stub
 		return false;
