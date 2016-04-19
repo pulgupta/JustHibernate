@@ -4,28 +4,27 @@
 
 <hibernate-configuration>
 	<session-factory>
-		<property name="hibernate.dialect">
-			org.hibernate.dialect.HSQLDialect
-		</property>
-		<property name="hibernate.connection.driver_class">
-			org.hsqldb.jdbcDriver
-		</property>
-		<property name="hibernate.connection.url">
-			jdbc:hsqldb:file:HibernateTestDb;shutdown=true
-		</property>
-		<property name="hibernate.connection.username">
-			SA
-		</property>
-		<property name="hibernate.connection.password">
-		</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+		<property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+		<property name="hibernate.connection.url">jdbc:hsqldb:file:HibernateTestDb;shutdown=true</property>
+		<property name="hibernate.connection.username">SA</property>
+		<property name="hibernate.connection.password"></property>
 		<property name="hibernate.current_session_context_class">thread</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hbm2ddl.auto">create</property>
-		<property name="hibernate.cache.region.factory_class">
-			org.hibernate.cache.ehcache.EhCacheRegionFactory
-		</property>
+		
+		<!-- Cache related properties -->
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
 		<property name="hibernate.cache.use_second_level_cache">true</property>
 		<property name="hibernate.cache.use_query_cache">true</property>
+
+		<!--c3p0 connection pool related properties  -->
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
+
 		<!-- List of annotated java class -->
 		<mapping class="com.justHibernate.Trade" />
 		<mapping class="com.justHibernate.mappings.Movie" />
@@ -34,7 +33,7 @@
 		<mapping class="com.justHibernate.mappings.Financers" />
 		<mapping class="com.justHibernate.inheritance.Employee" />
 		<mapping class="com.justHibernate.inheritance.Person" />
-		
+
 		<!-- List of mapping resources -->
 		<mapping resource="com/resources/hibernate.hbm.xml"></mapping>
 	</session-factory>
